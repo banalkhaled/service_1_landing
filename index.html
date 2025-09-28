@@ -1,188 +1,40 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>خدمة تنظيم عمل الفريق</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Cairo', sans-serif;
-      background: #f9fafb;
-      color: #111827;
-      line-height: 1.8;
-    }
-
-    header {
-      background-color: #1f2937;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header h2 {
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-top: 0;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem 1.5rem;
-      background: white;
-      border-radius: 1rem;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-    }
-
-    h3 {
-      color: #2563eb;
-      font-size: 1.3rem;
-      margin-top: 2rem;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 0.5rem;
-    }
-
-    ul {
-      padding-right: 1rem;
-    }
-
-    ul li {
-      margin-bottom: 0.7rem;
-    }
-
-    .highlight {
-      background: #e0f2fe;
-      padding: 0.3rem 0.6rem;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    .cta {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .cta a {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #10b981;
-      color: white;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .cta a:hover {
-      background: #059669;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 1.5rem;
-      color: #6b7280;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bana Alkhaled - Influencer Marketing Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              cairo: ['Cairo', 'sans-serif'],
+            },
+          },
+        },
       }
-      header h2 {
-        font-size: 1.1rem;
-      }
-      section {
-        padding: 1rem;
-      }
-    }
-  </style>
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+<!-- Add Babel to transpile JSX and TypeScript in the browser -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body>
-
-  <header>
-    <h1>🚨 فريقك في فوضى؟</h1>
-    <h2>حول عملك من "ضياع وفوضى" إلى نظام مرتب خلال 5 أيام فقط!</h2>
-  </header>
-
-  <section>
-    <h3>👩‍💻 لمن هذه الخدمة؟</h3>
-    <ul>
-      <li>عندك فريق بس ما حدا بيعرف شو عم يشتغل التاني؟</li>
-      <li>التكرار بالمهام، التأخير، والمشاكل مع العملاء صارت يومية؟</li>
-      <li>ضايعين بين الأدوات: Google Sheets، Trello، Slack؟</li>
-      <li>بدك نظام واحد واضح يختصر الوقت ويضبط الفريق؟</li>
-    </ul>
-
-    <h3>✅ علامَ ستحصل؟</h3>
-
-    <p><span class="highlight">1. جلسة فحص 1:1 (استشارة مجانية 30 دقيقة)</span><br>
-    نحكي عن التحديات الحالية ونفهم وضع فريقك بدقة</p>
-
-    <p><span class="highlight">2. تقرير تشخيصي خلال 48 ساعة</span><br>
-    تحليل شامل للعمل الحالي، يشمل:<br>
-    - نقاط الخلل في التعاون والتنفيذ<br>
-    - مشاكل في الأدوات أو المهام<br>
-    - فرص أتمتة وتوفير وقت<br>
-    <em>(يشمل ملف PDF + عرض مرئي لحالة العمل الحالية)</em></p>
-
-    <p><span class="highlight">3. نظام مخصص لإدارة فريقك</span><br>
-    بناء نظام باستخدام Airtable أو ClickUp يشمل:<br>
-    - مهام واضحة لكل فرد<br>
-    - أتمتة للعمليات المتكررة<br>
-    - لوحة رئيسية للرؤية العامة وسير التنفيذ</p>
-
-    <p><span class="highlight">4. فيديو شرح للنظام</span><br>
-    شرح مبسط لتطبيق النظام مع فريقك خطوة بخطوة</p>
-
-    <p><span class="highlight">5. دعم بعد التسليم لمدة شهر</span><br>
-    جلسة متابعة + تواصل مباشر لأي استفسار أو تعديل</p>
-
-    <p><span class="highlight">🎁 مكافآت إضافية:</span><br>
-    - قائمة خطوات تنفيذ النظام<br>
-    - قوالب جاهزة لأدوات Airtable<br>
-    - SOPs لتوثيق المهام الداخلية</p>
-
-    <h3>🎯 النتائج المتوقعة</h3>
-    <ul>
-      <li>توفير أكثر من <strong>10 ساعات أسبوعياً</strong></li>
-      <li>وضوح كامل في توزيع المهام</li>
-      <li>تسليم أسرع وأفضل للعملاء</li>
-      <li>جاهزية للنمو والتوسع</li>
-      <li>راحة نفسية لك وللفريق 🧘‍♀️</li>
-    </ul>
-
-    <h3>💸 الاستثمار</h3>
-    <p>
-    حسب حجم الفريق وتعقيد العمليات<br>
-    <span class="highlight">🎁 خصم 20% لأول 3 عملاء</span> مقابل شهادة أو دراسة حالة</p>
-
-    <h3>🛡 الضمان</h3>
-    <p><strong>ما في تحسّن؟ رجع فلوسك كاملة.</strong><br>
-    أنا واثقة بالخدمة ومستعدة أتحمّل النتيجة.</p>
-
-    <div class="cta">
-      <h3>🗓 احجز مكالمتك المجانية الآن</h3>
-      <a href="https://calendar.app.google/ZrFVfB837Fn79qgh9" target="_blank">احجز مكالمتك الآن</a><br><br>
-      <p>أو تواصل على LinkedIn: <a href="https://www.linkedin.com/in/banaalkhaled/" target="_blank">banaalkhaled</a></p>
-    </div>
-  </section>
-
-  <div class="footer">
-    © 2025 - جميع الحقوق محفوظة
-  </div>
-
-</body>
+  <body class="bg-white">
+    <div id="root"></div>
+    <!-- Changed script type to "text/babel" and added presets for React/TypeScript -->
+    <script type="text/babel" data-presets="react,typescript" src="./index.tsx"></script>
+  </body>
 </html>
-
